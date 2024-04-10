@@ -1,23 +1,29 @@
-// Imposta il nome della tua repository
-const repositoryName = "nvim-config";
+document.addEventListener("DOMContentLoaded", function() {
+    var container = document.createElement("div");
+    container.innerHTML = `
+        <h3>Directory Structure</h3>
+        <ul id="directory-list"></ul>
+    `;
+    document.body.appendChild(container);
 
-// Funzione per ottenere le informazioni sulla repository
-function getRepositoryInfo() {
-  fetch(`https://api.github.com/repos/T0ls/${repositoryName}`)
+    var directoryList = document.getElementById("directory-list");
+
+    fetch("https://api.github.com/repos/T0ls/nvim-config/contents")
     .then(response => response.json())
     .then(data => {
-      // Visualizza le informazioni sulla console (puoi personalizzare come desideri)
-      console.log("Repository name:", data.full_name);
-      console.log("Stars:", data.stargazers_count);
-      console.log("Forks:", data.forks_count);
-
-      // Aggiorna il contenuto HTML con le informazioni della repository
-      document.getElementById("repositoryName").innerText = data.full_name;
-      document.getElementById("starsCount").innerText = data.stargazers_count;
-      document.getElementById("forksCount").innerText = data.forks_count;
+        data.forEach(item => {
+            if (item.type === "dir") {
+                var listItem = document.createElement("li");
+                var link = document.createElement("a");
+                link.textContent = item.name;
+                link.href = item.html_url;
+                link.target = "_blank";
+                listItem.appendChild(link);
+                directoryList.appendChild(listItem);
+            }
+        });
     })
-    .catch(error => console.error("Error fetching repository info:", error));
-}
-
-// Chiama la funzione per ottenere le informazioni sulla repository al caricamento della pagina
-window.onload = getRepositoryInfo;
+    .catch(error => {
+        console.error("Error fetching directory structure:", error);
+    });
+});
