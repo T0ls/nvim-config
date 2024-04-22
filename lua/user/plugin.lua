@@ -14,7 +14,7 @@ vim.opt.rtp:prepend(lazypath)
 require("lazy").setup({
 	"sainnhe/gruvbox-material",
 	"akinsho/toggleterm.nvim",
-	"folke/which-key.nvim",
+	--"folke/which-key.nvim",
 	"windwp/nvim-autopairs",
 	"nvim-tree/nvim-tree.lua",
 	

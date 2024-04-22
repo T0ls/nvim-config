@@ -10,6 +10,7 @@ keymap('i', '<C-w>', '<esc><C-w>', {})	-- C-w in insert mode
 keymap('n', '<CR>', '<C-a>', {})		-- Increment number with CR
 keymap('n', '<BS>', '<C-x>', {})		-- Decrement number with BS
 keymap('n', '<C-o>', ':NvimTreeToggle<CR>', {})		-- Open NvimTree
+keymap('n', '4', '$', {})		-- Open NvimTree
 
 -- Easier way to escape the terminal
 keymap('t', '<Del>', '<C-\\><C-n>', {noremap = true})
