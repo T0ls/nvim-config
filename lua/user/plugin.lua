@@ -30,6 +30,9 @@ require("lazy").setup({
 	"nvim-treesitter/nvim-treesitter",
 	"hiphish/rainbow-delimiters.nvim",
 	"windwp/nvim-ts-autotag",
+	"lukas-reineke/indent-blankline.nvim",
+
+	"wakatime/vim-wakatime",
 	--"kevinhwang91/nvim-ufo", 
 	--'kevinhwang91/promise-async',
 	--	"ur4ltz/surround.nvim",
