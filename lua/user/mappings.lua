@@ -11,9 +11,11 @@ keymap('n', '<CR>', '<C-a>', {})				-- Increment number with CR
 keymap('n', '<BS>', '<C-x>', {})				-- Decrement number with BS
 keymap('n', '4', '$', {})						-- Fast end-line
 keymap('n', '<C-o>', ':NvimTreeToggle<CR>', {})	-- Open NvimTree
+keymap('n', '<TAb>', '<C-o>', {})						-- Toggle open fold
+keymap('n', '<S-TAB>', '<C-i>', {})						-- Toggle open fold
 keymap('n', '<', 'za', {})						-- Toggle open fold
 --keymap('n', '', 'zC', {})						-- Close fold recursive
-keymap('n', '>', 'zO', {})				-- Open fold recursive
+keymap('n', '>', 'zO', {})						-- Open fold recursive
 
 -- Easier way to escape the terminal
 keymap('t', '<Del>', '<C-\\><C-n>', {noremap = true})
