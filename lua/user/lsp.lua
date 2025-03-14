@@ -46,7 +46,7 @@ local capabilities = vim.lsp.protocol.make_client_capabilities()
 capabilities = cmplsp.default_capabilities(capabilities)
 capabilities.textDocument.completion.completionItem.snippetSupport = true
 
-local default_servers = { 'gopls', 'html', 'cssls', 'tsserver' }
+local default_servers = { 'gopls', 'html', 'cssls', 'ts_ls', "pylsp", "clangd"}
 for _, lsp in ipairs(default_servers) do
 	lspconfig[lsp].setup {
 		on_attach = on_attach,
