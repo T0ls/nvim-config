@@ -50,6 +50,10 @@ if ok then
 	keymap('n', '<leader>g', pickers.live_grep, {})
 end
 
+keymap({'n','v', 'i'}, '<Left>', function() print("NOP") end)
+keymap({'n','v', 'i'}, '<Right>', function() print("NOP") end)
+keymap({'n','v', 'i'}, '<Up>', function() print("NOP") end)
+keymap({'n','v', 'i'}, '<Down>', function() print("NOP") end)
 --[[
 keymap('n', '<Up>', '<Nop>', {noremap = true})
 keymap('n', '<Down>', '<Nop>', {noremap = true})
