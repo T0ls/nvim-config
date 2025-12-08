@@ -1,4 +1,4 @@
-# <img src="logo.svg" align="bottom" width="40"> Neovim Configuration
+# Neovim Configuration
 
 This is my custom Neovim configuration, focused on software development with support for various languages.
 
