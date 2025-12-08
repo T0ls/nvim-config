@@ -14,7 +14,6 @@ vim.opt.rtp:prepend(lazypath)
 require("lazy").setup({
 	"sainnhe/gruvbox-material",
 	"akinsho/toggleterm.nvim",
-	--"folke/which-key.nvim",
 	"windwp/nvim-autopairs",
 	"nvim-tree/nvim-tree.lua",
 	
@@ -31,6 +30,10 @@ require("lazy").setup({
 	"hiphish/rainbow-delimiters.nvim",
 	"windwp/nvim-ts-autotag",
 	"lukas-reineke/indent-blankline.nvim",
+	main = "ibl",
+	---@module "ibl"
+	---@type ibl.config
+	opts = {},
 	{ 
 		"nvim-telescope/telescope.nvim",
 		dependecies = { "BurntSushi/ripgrep" },
@@ -38,9 +41,6 @@ require("lazy").setup({
 	},
 
 	"wakatime/vim-wakatime",
-
-	--	"ur4ltz/surround.nvim"
-	--	"nvim-telescope/telescope.nvim"
 })
 local ok, autopairs = pcall(require, 'nvim-autopairs')
 if not ok then
@@ -48,3 +48,4 @@ if not ok then
 end
 
 autopairs.setup()
+require("ibl").setup()
