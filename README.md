@@ -1,32 +1,32 @@
-#  Neovim Configuration
+# <img src="logo.svg" align="bottom" width="40"> Neovim Configuration
 
-Questa è la mia configurazione personalizzata per Neovim, scritta interamente in Lua. È progettata per essere veloce, estensibile e focalizzata sullo sviluppo software con supporto per diversi linguaggi.
+This is my custom Neovim configuration, focused on software development with support for various languages.
 
-## Caratteristiche Principali
+## Main Features
 
-* **Gestore dei Plugin**: Utilizza [lazy.nvim](https://github.com/folke/lazy.nvim) per una gestione dei pacchetti rapida e moderna.
-* **LSP (Language Server Protocol)**: Configurazione integrata per Go, HTML, CSS, TypeScript/JavaScript, Python, C/C++ e SQL.
-* **Autocompletamento**: Completamento intelligente con `nvim-cmp` e snippet tramite `LuaSnip`.
-* **Interfaccia**:
-    * Tema **Gruvbox Material**.
-    * Statusline personalizzata con `lualine.nvim`.
-    * File explorer laterale con `nvim-tree`.
-* **Highlighting**: Sintassi avanzata gestita da `nvim-treesitter` con supporto Rainbow Delimiters.
-* **Terminale**: Terminale fluttuante integrato con `toggleterm.nvim`.
+* **Plugin Manager**: Uses [lazy.nvim](https://github.com/folke/lazy.nvim) for fast and modern package management.
+* **LSP (Language Server Protocol)**: Integrated configuration for Go, HTML, CSS, TypeScript/JavaScript, Python, C/C++, and SQL.
+* **Autocompletion**: Intelligent completion with `nvim-cmp` and snippets via `LuaSnip`.
+* **UI**:
+    * **Gruvbox Material** theme.
+    * Custom statusline with `lualine.nvim`.
+    * Sidebar file explorer with `nvim-tree`.
+* **Highlighting**: Advanced syntax highlighting managed by `nvim-treesitter` with Rainbow Delimiters support.
+* **Terminal**: Integrated floating terminal with `toggleterm.nvim`.
 
-## Prerequisiti
+## Prerequisites
 
-Assicurati di avere installato:
-* **Neovim** (versione >= 0.9.0 raccomandata)
+Make sure you have installed:
+* **Neovim** (version >= 0.9.0 recommended)
 * **Git**
-* **Ripgrep** (richiesto per le ricerche con Telescope)
-* **Nerd Font** (per visualizzare correttamente le icone)
-* **Language Servers**: Assicurati che i server per i tuoi linguaggi siano nel PATH (es. `gopls`, `clangd`, `pylsp`, `ts_ls`), poiché questa config non usa Mason per l'installazione automatica.
+* **Ripgrep** (required for Telescope searches)
+* **Nerd Font** (to display icons correctly)
+* **Language Servers**: Ensure servers for your languages are in your PATH (e.g., `gopls`, `clangd`, `pylsp`, `ts_ls`), as this config does not use Mason for automatic installation.
 
-## Installazione
+## Installation
 
-1.  Fai il backup della tua configurazione esistente.
-2.  Clona questa repository nella tua cartella di configurazione:
+1.  Backup your existing configuration.
+2.  Clone this repository into your configuration folder:
 
 ```bash
-git clone <url-tua-repo> ~/.config/nvim
+git clone <your-repo-url> ~/.config/nvim
