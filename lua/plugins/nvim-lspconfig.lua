@@ -3,41 +3,13 @@ local utils = require("utils")
 -- https://github.com/neovim/nvim-lspconfig/blob/master/doc/configs.md
 
 local lsps = {
-    rust_analyzer = {
-        imports = {
-            granularity = "module",
-            preferPrelude = true,
-        },
-    },
-    clangd = {
-        cmd = {
-            "clangd",
-            "--background-index",
-            "--clang-tidy",
-            "--header-insertion=never",
-            "--completion-style=detailed",
-            "--fallback-style=llvm",
-        },
-    },
-    basedpyright = nil,
-    lua_ls = {
-        settings = {
-            Lua = {
-                diagnostics = {
-                    globals = { "vim" },
-                },
-                runtime = { version = "LuaJIT" },
-                workspace = {
-                    checkThirdParty = false,
-                    ignoreSubmodules = false,
-                    library = vim.api.nvim_get_runtime_file("", true),
-                },
-            },
-        },
-    },
-    tinymist = nil,
+    html = nil,
     gopls = nil,
-    crystalline = nil,
+    cssls = nil,
+    ts_ls = nil,
+    pylsp = nil,
+    clangd = nil,
+    sqlls = nil,
 }
 
 local function load_lsps()

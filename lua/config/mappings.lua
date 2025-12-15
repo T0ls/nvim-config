@@ -6,9 +6,13 @@ vim.g.mapleader = " "
 map.set("global", {}, {
     -- Normal
     { ".", "n", ":" },                  -- Easier command mode
+    { "'", "n", ":noh<CR>" },                  -- Easier command mode
     { "<S-u>", "n", "<C-r>" },          -- Easier redo
     { "<CR>", "n", "<C-a>" },           -- Easier increment
     { "<BS>", "n", "<C-x>" },           -- Easier decrement
+    { "<TAB>", "n", "<C-o>" },          -- fast back-to-line
+    { "<S-TAB>", "n", "<C-i>" },        -- fast redo-to-line
+
     { "<S-a>", "n",
         function() return vim.bo.modifiable and "<S-a>" or "$" end,
         { "expr" }
@@ -90,6 +94,14 @@ map.set("neo-tree.filesystem", { "nowait" }, {
     { "h", "", "toggle_hidden" },
     { "<bs>", "", "navigate_up" },
     { ".", "", "set_root" },
+})
+
+map.set("telescope", {}, {
+    { "<leader>ff", "n", "<cmd>Telescope find_files<CR>" },  -- Search file
+    { "<leader>g", "n", "<cmd>Telescope live_grep<CR>" },    -- Search text in project files
+    { "<leader>fb", "n", "<cmd>Telescope buffers<CR>" },     -- Search in open buffers
+    { "<leader>fh", "n", "<cmd>Telescope help_tags<CR>" },   -- Search amng help tags
+    { "<leader>fr", "n", "<cmd>Telescope oldfiles<CR>" },    -- Search recent files
 })
 
 return { terminal_open = "<C-a>" }
