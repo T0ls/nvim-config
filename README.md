@@ -7,10 +7,11 @@ This is my custom Neovim configuration, focused on software development with sup
 * **Plugin Manager**: Uses [lazy.nvim](https://github.com/folke/lazy.nvim) for fast and modern package management.
 * **LSP (Language Server Protocol)**: Integrated configuration for Go, HTML, CSS, TypeScript/JavaScript, Python, C/C++, and SQL.
 * **Autocompletion**: Intelligent completion with `nvim-cmp` and snippets via `LuaSnip`.
+* **Fuzzy Finder**: Powerful file and text search capabilities using `telescope.nvim`.
 * **UI**:
     * **Gruvbox Material** theme.
     * Custom statusline with `lualine.nvim`.
-    * Sidebar file explorer with `nvim-tree`.
+    * Sidebar file explorer with `neo-tree.nvim`.
 * **Highlighting**: Advanced syntax highlighting managed by `nvim-treesitter` with Rainbow Delimiters support.
 * **Terminal**: Integrated floating terminal with `toggleterm.nvim`.
 
