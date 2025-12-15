@@ -30,4 +30,4 @@ Make sure you have installed:
 2.  Clone this repository into your configuration folder:
 
 ```bash
-git clone <your-repo-url> ~/.config/nvim
+git clone https://github.com/T0ls/nvim-config ~/.config/nvim
