@@ -34,7 +34,7 @@ map.set("global", {}, {
     { "<", "v", "<gv" },                -- Keep visual when changing indent
 
     --  Neotree
-    { "<leader>f", "n", "<cmd>Neotree focus<CR>" }  -- Open neotree
+    { "<leader>d", "n", "<cmd>Neotree toggle<CR>" }  -- Open neotree
 })
 
 -- Disable partial write
